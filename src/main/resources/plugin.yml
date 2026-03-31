@@ -1,0 +1,25 @@
+name: KeepEffects
+version: 1.0.0
+main: dev.andres.keepeffects.KeepEffectsPlugin
+api-version: '1.21'
+description: Keep your potion effects on death, fully configurable.
+author: Andres
+website: ''
+
+commands:
+  keepeffects:
+    description: Main command for KeepEffects
+    aliases: [ke]
+    usage: /keepeffects <reload|toggle|status>
+    permission: keepeffects.admin
+
+permissions:
+  keepeffects.admin:
+    description: Access to admin commands
+    default: op
+  keepeffects.keep:
+    description: Player keeps potion effects on death
+    default: true
+  keepeffects.keep.bypass:
+    description: Keeps effects even when globally disabled
+    default: op

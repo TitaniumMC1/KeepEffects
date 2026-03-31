@@ -1,0 +1,47 @@
+# KeepEffects Configuration
+# --------------------------
+
+# Enable or disable the plugin globally
+enabled: true
+
+# Keep effects when dying in specific worlds
+# Use 'all' to apply to all worlds, or list specific world names
+worlds:
+  - all
+
+# If true, effects are kept even in worlds with keepInventory gamerule ON
+# If false, only acts when keepInventory is OFF
+always-apply: true
+
+# Reduce effect duration on death?
+reduce-duration:
+  enabled: false
+  # Multiply remaining duration by this factor (e.g. 0.5 = lose half)
+  factor: 0.5
+
+# Reduce amplifier on death?
+reduce-amplifier:
+  enabled: false
+  # Subtract this from the amplifier (minimum 0; effect is removed if would go below 0)
+  subtract: 1
+
+# Effects to NEVER keep (blacklist) — use Bukkit effect names
+# Full list: https://jd.papermc.io/paper/1.21/
+blacklisted-effects:
+  - BLINDNESS
+  - DARKNESS
+
+# Effects to ALWAYS keep regardless of other settings (whitelist)
+# Leave empty to use blacklist-only mode
+whitelisted-effects: []
+
+# Messages (supports & color codes, use '' to disable)
+messages:
+  prefix: '&8[&bKeepEffects&8] '
+  kept: '&aYour potion effects were preserved after death!'
+  none-kept: ''
+  reload: '&aConfiguration reloaded.'
+  toggled-on: '&aKeepEffects globally &2enabled&a.'
+  toggled-off: '&cKeepEffects globally &4disabled&c.'
+  status-on: '&aKeepEffects is currently &2ENABLED&a.'
+  status-off: '&cKeepEffects is currently &4DISABLED&c.'
